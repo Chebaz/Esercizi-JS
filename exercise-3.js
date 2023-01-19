@@ -1,9 +1,7 @@
 function calculateAverageAge(persons) {
-  const initialValue = 0;
-  let average = persons.reduce(
-    (accomulator, currentValue) => accomulator + currentValue,
-    initialValue
-  );
+  let average =
+    persons.map((person) => person.age).reduce((a, b) => a + b) /
+    persons.length;
   return average;
 }
 const persons = [
