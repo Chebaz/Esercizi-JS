@@ -1,8 +1,7 @@
 function uncompletedNotes(notes) {
   notes.forEach((element) => {
-    element.todos.filter((el) => el.todos == false);
+    element.todos.filter((param) => param.done === false);
   });
-  return notes;
 }
 
 const notes = [
