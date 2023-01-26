@@ -4,15 +4,26 @@ class Person {
     this.lastName = lastName;
     this.age = age;
   }
-  getFullName() {
-    return this.firstName + " " + this.lastName;
+  get FirstName() {
+    return this.firstName;
   }
-  setFullName(newFirstName, newLastName) {
+  get LastName() {
+    return this.lastName;
+  }
+  get Age() {
+    return this.age;
+  }
+  set FirstName(newFirstName) {
     this.firstName = newFirstName;
+  }
+  set FirstName(newLastName) {
     this.lastName = newLastName;
   }
+  set FirstName(newAge) {
+    this.age = newAge;
+  }
   fullName() {
-    return this.getFullName();
+    return this.firstName + " " + this.lastName;
   }
 }
 
@@ -20,6 +31,5 @@ const person = new Person("Mario", "Rossi", 25);
 console.log(person.fullName());
 
 person.firstName = "Maria";
-console.log(person.fullName());
 person.lastName = "Verdi";
 console.log(person.fullName());
