@@ -6,7 +6,9 @@ class Person {
     this.age = age;
   }
   static fromJson(json) {
-    return JSON.parse(json);
+    const object = JSON.parse(json);
+    const person = new Person(object.id, object.firstName, object.lastName, object.name);
+    return person;
   }
 
   toJson() {
